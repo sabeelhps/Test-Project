@@ -1,0 +1,60 @@
+
+
+                    API CALL - GET ALL PRODUCTS (REQUEST)
+             FRONTEND   ---------------------->      BACKEND (Express-App)
+                   (LIST OF ALL PRODUCTS - RESPONSE)    |
+                                                        | Mongoose - (Model - JS Class)
+                                                        |
+                                                        V
+                                                     DATABASE
+                                             (LIST OF ALL PRODUCTS)
+
+
+
+
+BACKEND(Node.js)
+      -> Express - framework for creating server in nodejs.
+      -> ODM(Object data mapper) - Mongoose 
+      -> MongoDB - As a database
+
+
+----------------------------------------------------------------
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+https://mongoosejs.com/
+https://mongoosejs.com/docs/api/model.html
+----------------------------------------------------------------
+
+
+
+
+Request = Method + Url
+
+
+
+Mongo DATABASE
+
+      Database (book-store)
+            |
+            |
+            V
+           book (Collection) --> Model represent this thing
+            |
+            |
+            V
+         Document (Each entry in a collection)
+            |
+            |
+            V
+          fields (title,link etc)
+
+
+Model is js class and it represent collection in a mongodb database .
+
+Before creating a model we need to create a schema 
+
+
+
+CORS - cross origin resourse sharing
+            
+
+

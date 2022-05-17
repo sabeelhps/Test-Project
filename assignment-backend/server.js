@@ -1,0 +1,40 @@
+const express = require('express');
+const mongoose = require('mongoose');
+const app = express();
+const Book = require('./models/Book');
+const cors = require('cors');
+
+
+
+// Connecting to mongo db database -> book-store
+mongoose.connect('mongodb://localhost:27017/book-store')
+    .then(() => console.log("DB Connected"))
+    .catch((err) => console.log("DB Connection failed"));
+
+
+
+
+app.use(cors({
+    origin: ['http://localhost:3000']
+}));
+    
+
+
+
+app.get('/products', async(req, res) => {
+    try {
+        const books = await Book.find({});
+        res.status(200).json(books);
+    }
+    catch (e) {
+        res.status(404).json({ error: 'Cannot fetch the products at the moment' });
+    }
+});
+
+// http://localhost:8080/products
+
+
+
+app.listen(8080, () => {
+    console.log("server started at http://localhost:8080");
+});
