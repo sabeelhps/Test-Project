@@ -55,6 +55,15 @@ Before creating a model we need to create a schema
 
 
 CORS - cross origin resourse sharing
+
+
+
+
+
+
+
+
+.
             
 
 
