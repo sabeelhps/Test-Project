@@ -9,7 +9,11 @@ const bookSchema = new mongoose.Schema({
     link: String,
     pages: Number,
     title: String,
-    year: Number
+    year: Number,
+    clickCount: {
+        type: Number,
+        default:0
+    }
 });
 
 

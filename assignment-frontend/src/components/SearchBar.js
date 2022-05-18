@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import './SearchBar.css'
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from "@mui/icons-material/Close";
+import { Link } from 'react-router-dom';
 
 
 
@@ -46,13 +47,16 @@ function SearchBar({data}) {
 
         </div>
         </div>
-        {filteredData.length != 0 && (
+        {filteredData.length !== 0 && (
         <div className="dataResult">
-          {filteredData.slice(0, 15).map((value, key) => {
+          {filteredData.slice(0, 15).map((book) => {
             return (
-              <a key={value._id} className="dataItem" href={value.link} target="_blank">
-                <p>{value.title} </p>
-              </a>
+              <Link to={`/book/${book._id}`} key={book._id}>
+                <div className="dataItem"> 
+                  <img src={book.imageLink} alt="" className='image' />        
+                  <h5>{ book.title }</h5>
+                </div>
+              </Link>
             );
           })}
         </div>

@@ -3,75 +3,89 @@
   
 
   .searchBar{
-      margin-top: 100px;
-      
-  }
-  .searchBox{
-      display: flex;
-      justify-content: center;
-  }
-
-  .inputBox{
-    background-color: white;
-    border: 0;
-    border-radius: 2px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    font-size: 25px;
-    padding: 15px;
-    height: 30px;
-    width: 300px;
-  }
-
-  .searchIcon {
-    font-size: 50px;
-    height: 60px;
-    width: 50px;
-    background-color: white;
-    display: grid;
-    place-items: center;
-  }
-
-  input:focus {
-    outline: none;
-  }
-  .searchIcon svg {
-    font-size: 35px;
-  }
-  .searchIcon:hover{
-      cursor: pointer;
-  }
-
-  .dataResult {
-    margin: 0px auto;
-    width: 380px;
-    height: 200px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    overflow: hidden;
-    overflow-y: auto;
-  }
-  
-  .dataResult::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .dataResult .dataItem {
-    border: 1px solid grey;
-    width: 100%;
-    height: 30px;
+    margin-top: 50px;
+    
+}
+.searchBox{
     display: flex;
-    align-items: center;
-    color: black;
-  }
+    justify-content: center;
+}
+
+.inputBox{
+  background-color: white;
+  border: 0;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 25px;
+  padding: 15px;
+  height: 30px;
+  width: 800px;
+}
+
+.searchIcon {
+  font-size: 50px;
+  height: 60px;
+  width: 50px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+
+input:focus {
+  outline: none;
+}
+.searchIcon svg {
+  font-size: 35px;
+}
+.searchIcon:hover{
+    cursor: pointer;
+}
+
+.dataResult {
+  border: 2px solid grey;
+  margin: 0px auto;
+  width: 880px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 500px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+.dataResult .dataItem {
   
-  .dataItem p {
-    margin-left: 10px;
-  }
-  a {
-    text-decoration: none;
-  }
-  
-  a:hover {
-    background-color: lightgrey;
-  }
+  margin: 5px;
+  border: 1px solid grey;
+  width: 250px;
+  height: 270px;
+  /* display: flex; */
+  align-items: center;
+  color: black;
+}
+
+.dataItem p {
+  margin-left: 10px;
+}
+a {
+  text-decoration: none;
+}
+li{
+  list-style-type: none;
+}
+
+a:hover {
+  background-color: lightgrey;
+}
+.image{
+  /* margin-left:25px  ; */
+  width: 250px;
+  height: 200px;
+}
